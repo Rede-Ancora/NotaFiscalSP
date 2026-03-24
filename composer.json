@@ -1,13 +1,14 @@
 {
     "name": "kaleu62/notafiscalsp",
-    "description": "Integração com o WebService da Prefeitura de São Paulo para emissão de NFS e NTFS utilizando a API da nota do milhão",
+    "description": "Integração com o WebService da Prefeitura de São Paulo para emissão de NFS e NFTS utilizando a API da nota do milhão",
     "type": "library",
     "license": "MIT",
+    "replace": {
+        "greenter/xmldsig": "5.0.3"
+    },
     "require": {
         "php": "^8.0",
-        "cweagans/composer-patches": "^1.7",
         "robrichards/xmlseclibs": "^3.0",
-        "greenter/xmldsig": "^5.0",
         "spatie/array-to-xml": "^3.3",
         "ext-dom": "*",
         "ext-soap": "*"
@@ -35,7 +36,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "NotaFiscalSP\\": "src/"
+            "NotaFiscalSP\\": "src/",
+            "Greenter\\XMLSecLibs\\": "lib/Greenter/XMLSecLibs/"
         }
     },
     "require-dev": {
@@ -44,17 +46,5 @@
     "scripts": {
         "test": "vendor/bin/phpunit"
     },
-    "minimum-stability": "stable",
-    "config": {
-        "allow-plugins": {
-            "cweagans/composer-patches": true
-        }
-    },
-    "extra": {
-        "patches": {
-            "greenter/xmldsig": {
-                "PHP 8.4: explicit nullable getPublicKey() parameter": "patches/greenter-xmldsig-php84.patch"
-            }
-        }
-    }
+    "minimum-stability": "stable"
 }

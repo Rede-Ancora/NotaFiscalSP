@@ -1,0 +1,3 @@
+Vendored from greenter/xmldsig v5.0.3 (BSD-2-Clause).
+Source: https://github.com/thegreenter/xmldsig
+Change vs upstream: SignedXml::getPublicKey() uses explicit nullable (?DOMDocument) for PHP 8.4.
