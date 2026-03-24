@@ -4,9 +4,11 @@
     "type": "library",
     "license": "MIT",
     "require": {
+        "php": "^8.0",
+        "cweagans/composer-patches": "^1.7",
         "robrichards/xmlseclibs": "^3.0",
         "greenter/xmldsig": "^5.0",
-        "spatie/array-to-xml": "^2.8",
+        "spatie/array-to-xml": "^3.3",
         "ext-dom": "*",
         "ext-soap": "*"
     },
@@ -42,5 +44,17 @@
     "scripts": {
         "test": "vendor/bin/phpunit"
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "config": {
+        "allow-plugins": {
+            "cweagans/composer-patches": true
+        }
+    },
+    "extra": {
+        "patches": {
+            "greenter/xmldsig": {
+                "PHP 8.4: explicit nullable getPublicKey() parameter": "patches/greenter-xmldsig-php84.patch"
+            }
+        }
+    }
 }

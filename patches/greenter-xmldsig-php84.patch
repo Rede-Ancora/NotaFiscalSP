@@ -1,0 +1,13 @@
+diff --git a/src/Sunat/SignedXml.php b/src/Sunat/SignedXml.php
+index f8ef344..91d1ade 100644
+--- a/src/Sunat/SignedXml.php
++++ b/src/Sunat/SignedXml.php
+@@ -110,7 +110,7 @@ class SignedXml
+     /**
+      * @inheritdoc
+      */
+-    public function getPublicKey(DOMDocument $doc = null)
++    public function getPublicKey(?DOMDocument $doc = null)
+     {
+         if ($doc) {
+             $this->setPublicKeyFromNode($doc);
