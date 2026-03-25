@@ -1,40 +1,35 @@
-A similar PR may already be submitted!
-Please search among the [Pull request](../) before creating one.
+# Descrição
 
-Thanks for submitting a pull request! Please provide enough information so that others can review your pull request:
+Inclua um resumo da alteração e qual problema foi corrigido. Inclua também motivação e contexto relevantes. Liste todas as dependências necessárias para essa alteração. Você também adicionar o link da tarefa que você está trabalhando para referenciar o contexto/requisitos.
 
-For more information, see the `CONTRIBUTING` guide.
+O título do PR deve conter a(s) chave(s) da tarefa no JIRA:
 
+Exemplo: [PRT-556] Alteração nos campos do grid do painel de lista de preço 
 
-**Summary**
+### Tarefa no JIRA
 
-<!-- Summary of the PR -->
+- Key: PRT-556
+- Link: https://redeancora.atlassian.net/browse/PRT-556
 
-This PR fixes/implements the following **bugs/features**
+### Tipo de alteração
 
-* [ ] Bug 1
-* [ ] Bug 2
-* [ ] Feature 1
-* [ ] Feature 2
-* [ ] Breaking changes
+- [ ] Correção de bug (mudança ininterrupta que corrige um problema)
+- [ ] Novo recurso (mudança ininterrupta que adiciona funcionalidade)
+- [ ] Mudança de última hora (correção ou recurso que faria com que a funcionalidade existente não funcionasse conforme o esperado)
+- [ ] Esta alteração requer uma atualização da documentação
 
-<!-- You can skip this if you're fixing a typo or adding an app to the Showcase. -->
+### Como isso foi testado?
 
-Explain the **motivation** for making this change. What existing problem does the pull request solve?
+Forneça instruções para que possamos reproduzir. Liste também todos os detalhes relevantes para sua configuração de testes.
 
-<!-- Example: When "Adding a function to do X", explain why it is necessary to have a way to do X. -->
+Deve haver ao menos um teste implementado que cobre essa mudança. Caso já não exista um (ou alguns), crie!
 
-**Test plan (required)**
+Liste aqui os testes implementados.
 
-Demonstrate the code is solid. Example: The exact commands you ran and their output, screenshots / videos if the pull request changes UI.
+Caso ache pertinente, descreva os testes que você executou para verificar suas alterações.
 
-<!-- Make sure tests pass on both Travis and Circle CI. -->
+Um exemplo: 
 
-**Code formatting**
-
-<!-- See the simple style guide. -->
-
-**Closing issues**
-
-<!-- Put `closes #XXXX` in your comment to auto-close the issue that your PR fixes (if such). -->
-Fixes #
+**Pré requisitos de Teste**: (remova caso seja necessário)
+* Seed para entidade Product: novo dataset Products gerado.
+* Redis v6.0.5: instalado e configurado. (caso não seja o já usado no docker do projeto)
