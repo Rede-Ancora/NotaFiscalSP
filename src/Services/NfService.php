@@ -52,7 +52,7 @@ class NfService
         return $this->processRequest($baseInformation, ['document' => $document], NfMethods::CONSULTA_CNPJ, $builder, $outputClass);
     }
 
-    private function processRequest(BaseInformation $information, $params, $method, InputTransformer $builder, OutputClass $outputClass = null)
+    private function processRequest(BaseInformation $information, $params, $method, InputTransformer $builder, ?OutputClass $outputClass = null)
     {
         // Check Output Type
         $outputClass = !empty($outputClass) ? $outputClass : $this->response;
@@ -144,7 +144,7 @@ class NfService
         return $this->processAsyncRequest($baseInformation, $params, NfAsyncMethods::TESTE_ENVIO_LOTE, $builder);
     }
 
-    private function processAsyncRequest(BaseInformation $information, $params, $method, InputTransformer $builder, OutputClass $outputClass = null)
+    private function processAsyncRequest(BaseInformation $information, $params, $method, InputTransformer $builder, ?OutputClass $outputClass = null)
     {
         // Check Output Type
         $outputClass = !empty($outputClass) ? $outputClass : $this->response;
